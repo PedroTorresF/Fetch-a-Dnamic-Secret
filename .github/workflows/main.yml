@@ -56,7 +56,7 @@ jobs:
 
           }}' | jq -r 'to_entries|map("POSTGRES_\(.key|ascii_upcase)=\(.value|tostring)")|.[]'
 
-          >> $GITHUB_ENV
+                        >> $GITHUB_ENV
 
       - name: Verify Vars
 
